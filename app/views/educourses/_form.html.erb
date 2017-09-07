@@ -1,0 +1,27 @@
+<%= form_with(model: educourse, local: true) do |form| %>
+  <% if educourse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(educourse.errors.count, "error") %> prohibited this educourse from being saved:</h2>
+
+      <ul>
+      <% educourse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :courseCode %>
+    <%= form.text_field :courseCode, id: :educourse_courseCode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :courseName %>
+    <%= form.text_field :courseName, id: :educourse_courseName %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

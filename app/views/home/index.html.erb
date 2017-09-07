@@ -1,0 +1,12 @@
+<h1> Welcome to Brain Map </h1>
+
+<p> Choose Login Below </p>
+
+
+
+<% if educator_signed_in? %>
+  <li>
+  <%= link_to 'Go to courses', educourses_path %>
+
+  </li>
+<% end %>

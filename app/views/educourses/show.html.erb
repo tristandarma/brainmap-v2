@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course code:</strong>
+  <%= @educourse.courseCode %>
+</p>
+
+<%= link_to 'Add Course', new_educourse_path %>
+
+<p>
+  <strong>Course Name:</strong>
+  <%= @educourse.courseName %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_educourse_path(@educourse) %> |
+<%= link_to 'Back', educourses_path %>
